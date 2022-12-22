@@ -1,0 +1,38 @@
+<body>
+    <h3>Welcome to all the customers!!</h3>
+    <br>
+    <br>
+    <br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3">
+                <a class="btn btn-primary" [routerLink]="['/Cusreg']" role="button">Register as customer</a>                
+            </div>
+            <div class="col-sm-3">
+                <a class="btn btn-primary" [routerLink]="['/Cusedit/:customer_email']" role="button">Edit customer details</a>                
+            </div>
+            <div class="col-sm-3">
+                <a class="btn btn-primary" [routerLink]="['/Prodbyid']" role="button">View product by ID</a>                
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-sm-3">
+                <a class="btn btn-primary" [routerLink]="['/allprod']" role="button">View all products</a>                
+            </div>
+            <div class="col-sm-3">
+                <a class="btn btn-primary" [routerLink]="['/prodbycat']" role="button">Product by Category</a>                
+            </div>
+            <div class="col-sm-3">
+                <a class="btn btn-primary" [routerLink]="['/placebid']" role="button">Place Bid</a>                
+            </div>
+            <div class="col-sm-3">
+                <a class="btn btn-primary" [routerLink]="['/viewallbids']" role="button">View all bids</a>                
+            </div>
+        </div>
+    </div>
+    
+</body>
+

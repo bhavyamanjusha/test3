@@ -1,0 +1,78 @@
+<br>
+<br>
+
+<body>
+    <form (ngSubmit)="createCustomer()">
+        <div class="row">
+            <div class="col-sm-2">
+                <p>Email</p>
+            </div>
+            <div class="col-sm-4">
+                <input type="text" [(ngModel)]="customer.customer_email" size="30" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="col-sm-2">
+                <p>Customer Name</p>
+            </div>
+            <div class="col-sm-4">
+                <input type="text" [(ngModel)]="customer.customer_name" size="30" [ngModelOptions]="{standalone: true}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+                <p>Date of Birth</p>
+            </div>
+            <div class="col-sm-4">
+                <input type="date" size="30" [(ngModel)]="customer.customer_dob" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="col-sm-2">
+                <p>Contact Number</p>
+            </div>
+            <div class="col-sm-4">
+                <input type="text" size="30" [(ngModel)]="customer.customer_contact" [ngModelOptions]="{standalone: true}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+                <p>City</p>
+            </div>
+            <div class="col-sm-4">
+                <input type="text" size="30" [(ngModel)]="customer.customer_city" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="col-sm-2">
+                <p>Choose your category likely to buy</p>
+            </div>
+            <div class="col-sm-4">
+                <select class="form-select" aria-label="Default select example"
+                    [(ngModel)]="customer.cust_prod_category" [ngModelOptions]="{standalone: true}">
+                    <option selected>Category</option>
+                    <option value="1">Gold</option>
+                    <option value="2">Paintings</option>
+                    <option value="3">Archaelogical Ornaments</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+                <p>Enter product name</p>
+            </div>
+            <div class="col-sm-4">
+                <input type="text" size="30" [(ngModel)]="customer.cust_prod_name" [ngModelOptions]="{standalone: true}">
+            </div>
+
+            <div class="col-sm-2">
+                <p>Enter your customer ID </p>
+            </div>
+            <div class="col-sm-4">
+                <input type="text" size="30" [(ngModel)]="customer.cust_ID"[ngModelOptions]="{standalone: true}">
+            </div>
+
+
+        </div>
+        <div class="row">
+            <div class="col-sm-7">
+                <input type="submit" value="Register">
+            </div>
+        </div>
+    </form>
+    <span class="text-info">{{message}}</span>
+</body>

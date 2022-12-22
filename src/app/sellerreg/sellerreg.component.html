@@ -1,0 +1,74 @@
+<br>
+<br>
+<body>
+    <form (ngSubmit)="createSeller()">
+<div class="row">
+    <div class="col-sm-2">
+        <p>Seller Email</p>              
+    </div>
+    <div class="col-sm-4">
+        <input type="text" size="30" [ngModelOptions]="{standalone: true}" [(ngModel)]="seller.seller_email">            
+    </div>
+    <div class="col-sm-2">
+        <p>Date of Birth</p>              
+    </div>
+    <div class="col-sm-4">
+        <input type="date" size="30" [ngModelOptions]="{standalone: true}" [(ngModel)]="seller.seller_dob">          
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-2">
+        <p>Contact</p>              
+    </div>
+    <div class="col-sm-4">
+        <input type="text" size="30" [ngModelOptions]="{standalone: true}" [(ngModel)]="seller.seller_contact">            
+    </div>
+    <div class="col-sm-2">
+        <p>City</p>              
+    </div>
+    <div class="col-sm-4">
+        <input type="text" size="30" >          
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-2">
+        <p>Choose your category to sell</p>              
+    </div>
+    <div class="col-sm-4">
+        <select class="form-select" aria-label="Default select example" [ngModelOptions]="{standalone: true}" [(ngModel)]="seller.seller_prod_category">
+            <option selected>Category</option>
+            <option value="1">Gold</option>
+            <option value="2">Paintings</option>
+            <option value="3">Archaelogical Ornaments</option>
+          </select>
+</div>
+<div class="col-sm-2">
+    <p>Seller Name</p>              
+</div>
+<div class="col-sm-4">
+    <input type="text" size="30" [ngModelOptions]="{standalone: true}"  [(ngModel)]="seller.seller_name">                
+</div>
+<div class="row">
+    <div class="col-sm-2">
+        <p>Product Name</p>              
+    </div>
+    <div class="col-sm-4">
+        <input type="text" size="30"  [ngModelOptions]="{standalone: true}" [(ngModel)]="seller.seller_prod_name">            
+    </div>
+    <div class="col-sm-2">
+        <p>Seller ID</p>              
+    </div>
+    <div class="col-sm-4">
+        <input type="text" size="30" [ngModelOptions]="{standalone: true}" [(ngModel)]="seller.seller_ID" >          
+    </div>
+</div>
+
+</div>
+<div class="row">
+    <div class="col-sm-7">
+    <input type="submit" value="Register">
+</div>
+</div>
+</form>
+<span class="text-info">{{message}}</span>
+</body>

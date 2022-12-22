@@ -1,0 +1,77 @@
+<br>
+<br>
+
+
+<img src="src\assets\gradientbg.jpg">
+    <form (ngSubmit)="updateCustomer()">
+        <div class="row">
+            <div class="col-sm-2">
+                <p>Customer Email</p>
+            </div>
+            <div class="col-sm-4">
+                <input type="text" name="cus_email" [(ngModel)]="customer.customer_email" size="30">
+            </div>
+            <div class="col-sm-2">
+                <p>Customer Name</p>
+            </div>
+            <div class="col-sm-4">
+                <input type="text" name="cus_name"  size="30" class="form -control" [(ngModel)]="customer.customer_name">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+                <p>Date of Birth</p>
+            </div>
+            <div class="col-sm-4">
+                <input type="date" size="30" name="cus_dob"  class="form-control" [(ngModel)]="customer.customer_dob">
+            </div>
+            <div class="col-sm-2">
+                <p>Contact Number</p>
+            </div>
+            <div class="col-sm-4">
+                <input type="text" name="cus_contact" size="30"  class="" form-control>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+                <p>City</p>
+            </div>
+            <div class="col-sm-4">
+                <input type="text" name="cus_city" size="30" [(ngModel)]="customer.customer_city" class="form-control">
+            </div>
+            <div class="col-sm-2">
+                <p>Choose your category likely to buy</p>
+            </div>
+            <div class="col-sm-4">
+                <select class="form-select" name="cus_prod_category" aria-label="Default select example"
+                    [(ngModel)]="customer.cust_prod_category" class=""form-control>
+                    <option selected>Category</option>
+                    <option value="1">Gold</option>
+                    <option value="2">Paintings</option>
+                    <option value="3">Archaelogical Ornaments</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+                <p>Enter product name</p>
+            </div>
+            <div class="col-sm-4">
+                <input type="text" name ="cus_prod_name" size="30" [(ngModel)]="customer.cust_prod_name" >
+            </div>
+
+            <div class="col-sm-2">
+                <p>Enter your customer ID </p>
+            </div>
+            <div class="col-sm-4">
+                <input type="text" size="30" name="cus_id" [(ngModel)]="customer.cust_ID">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-7">
+                <input type="submit" value="Update Details" role="button" >
+            </div>
+        </div>
+    </form>
+  
+    <span class="text-info">{{message}}</span>
